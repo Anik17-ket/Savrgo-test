@@ -34,8 +34,8 @@ const DealItem = ({ item, onPress }) => {
           {item.description}
         </Text>
         <View style={styles.priceContainer}>
-          <Text style={styles.originalPrice}>${item.originalPrice.toFixed(2)}</Text>
-          <Text style={styles.discountedPrice}>${item.discountedPrice.toFixed(2)}</Text>
+          <Text style={styles.originalPrice}>Rs {item.originalPrice.toFixed(2)}</Text>
+          <Text style={styles.discountedPrice}>Rs {item.discountedPrice.toFixed(2)}</Text>
         </View>
         <View style={styles.dealFooter}>
           <Text style={styles.validUntil}>Valid until {new Date(item.validUntil).toLocaleDateString()}</Text>
@@ -136,11 +136,11 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
     elevation: 2,
   },
-  dealImage: {
-    width: "100%",
-    height: 150,
-    resizeMode: "cover",
-  },
+  // dealImage: {
+  //   width: "100%",
+  //   height: 150,
+  //   resizeMode: "cover",
+  // },
   dealContent: {
     padding: 15,
   },
